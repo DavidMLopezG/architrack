@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/architrack
+    username: admin
+    password: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  jackson:
+    serialization:
+      indent_output: true
+
+server:
+  port: 8081
+
+jwt:
+  secret: mi-secreto-ultra-seguro
+  expiration-ms: 3600000

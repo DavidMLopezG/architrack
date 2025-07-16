@@ -1,10 +1,9 @@
-package com.architrack.userservice.controller;
+package com.architrack.playerservice.controller;
 
 
-import com.architrack.userservice.entity.Player;
-import com.architrack.userservice.service.PlayerService;
+import com.architrack.playerservice.entity.Player;
+import com.architrack.playerservice.service.PlayerService;
 import lombok.RequiredArgsConstructor;
-import org.apache.catalina.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

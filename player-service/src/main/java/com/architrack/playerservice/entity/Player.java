@@ -1,4 +1,4 @@
-package com.architrack.userservice.entity;
+package com.architrack.playerservice.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

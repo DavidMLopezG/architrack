@@ -1,12 +1,13 @@
-package com.architrack.userservice.service;
+package com.architrack.playerservice.service;
 
-import com.architrack.userservice.entity.Player;
-import com.architrack.userservice.repository.PlayerRepository;
+import com.architrack.playerservice.entity.Player;
+import com.architrack.playerservice.repository.PlayerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 
 /**
  * Servicio para operaciones CRUD de Player.
@@ -24,6 +25,13 @@ public class PlayerService {
     public Player findById(Long id) {
         return repository.findById(id).orElseThrow(()
                 -> new NoSuchElementException("Usuario no encontrado con ID:" + id));
+    }
+
+    /**
+     * Busca un jugador por nombre.
+     */
+    public Optional<Player> findByName(String name) {
+        return repository.findByPlayerName(name);
     }
 
     public Player create(Player newPlayer){
